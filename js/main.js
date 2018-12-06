@@ -1,7 +1,5 @@
-
-
 window.onload = function() {
-    
+
     let intervalId;
 
     const DOM = {
@@ -88,36 +86,33 @@ window.onload = function() {
         DOM.avg.innerHTML = msToHHMMSS(avg);
     }
 
-function msToHHMMSS(ms) {
-    // Don't use parseInt. Use instead Math.floor. Avoid javascript issue: parseInt(0.0000000000000001) = 1 (!?)
-    ms = Number(ms);
-    let ss = Math.floor((ms / 1000) % 60, 10);
-    let mm = Math.floor((ms / (1000 * 60)) % 60, 10);
-    let hh = Math.floor((ms / (1000 * 60 * 60)) % 24, 10);
-    if (mm < 10) mm = "0" + mm;
-    if (ss < 10) ss = "0" + ss;
-    if (hh < 10) hh = "0" + hh;
-    return hh + ":" + mm + ":" + ss;
-}
+    function msToHHMMSS(ms) {
+        // Don't use parseInt. Use instead Math.floor. Avoid javascript issue: parseInt(0.0000000000000001) = 1 (!?)
+        ms = Number(ms);
+        let ss = Math.floor((ms / 1000) % 60, 10);
+        let mm = Math.floor((ms / (1000 * 60)) % 60, 10);
+        let hh = Math.floor((ms / (1000 * 60 * 60)) % 24, 10);
+        if (mm < 10) mm = "0" + mm;
+        if (ss < 10) ss = "0" + ss;
+        if (hh < 10) hh = "0" + hh;
+        return hh + ":" + mm + ":" + ss;
+    }
 
-function getCurrentDateTimeInMs() {
-    const now = new Date();
-    return now.getTime();
-}
+    function getCurrentDateTimeInMs() {
+        const now = new Date();
+        return now.getTime();
+    }
 
-function getDay(numDay) {
-    let date = new Date();
-    date.setDate(date.getDate() - numDay);
-    let YY = date.getFullYear();
-    let MM = date.getMonth() + 1;
-    let DD = date.getDate();
-    if (YY < 10) YY = "0" + YY;
-    if (MM < 10) MM = "0" + MM;
-    if (DD < 10) DD = "0" + DD;
-    return YY + "-" + MM + "-" + DD;
-}
-
-
+    function getDay(numDay) {
+        let date = new Date();
+        date.setDate(date.getDate() - numDay);
+        let YY = date.getFullYear();
+        let MM = date.getMonth() + 1;
+        let DD = date.getDate();
+        if (YY < 10) YY = "0" + YY;
+        if (MM < 10) MM = "0" + MM;
+        if (DD < 10) DD = "0" + DD;
+        return YY + "-" + MM + "-" + DD;
+    }
+    
 };
-
-
