@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app>
+
+<head>
+  <title>Invisalign Time Log</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <h1> Invisalign Time Log </h1>
+  <div id="content" style="visibility:hidden;">
+    <a id="bttn" class="myButton">START</a>
+
+    <h2 style="padding-top:12px"> Today </h2>
+    <h3 id="hoy"> --:--:-- </h3>
+    <h2> Daily Average </h2>
+    <h3 id="avg"> --:--:-- </h3>
+    <h2> Log Daily Times </h2>
+    <h3 id="log1"> 0000-00-00 00:00:00 </h3>
+    <h3 id="log2"> 0000-00-00 00:00:00 </h3>
+    <h3 id="log3"> 0000-00-00 00:00:00 </h3>
+    <h3 id="log4"> 0000-00-00 00:00:00 </h3>
+
+  </div>
+  <script type="text/javascript" src="/js/main.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>
