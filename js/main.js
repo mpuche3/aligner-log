@@ -79,9 +79,9 @@ window.onload = function() {
     function showAvg() {
         let avg = 0;
         avg += Number(window.localStorage[getDay(1)]);
-        avg += Number(window.localStorage[getDay(1)]);
-        avg += Number(window.localStorage[getDay(1)]);
-        avg += Number(window.localStorage[getDay(1)]);
+        avg += Number(window.localStorage[getDay(2)]);
+        avg += Number(window.localStorage[getDay(3)]);
+        avg += Number(window.localStorage[getDay(4)]);
         avg = avg / 4;
         DOM.avg.innerHTML = msToHHMMSS(avg);
     }
